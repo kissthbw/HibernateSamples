@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <!-- Database connection settings -->
+  <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="connection.url">jdbc:mysql://127.0.0.1:3306/Tutorial?allowPublicKeyRetrieval=true&amp;useSSL=false&amp;serverTimezone=UTC</property>
+  <property name="connection.username">root</property>
+  <property name="connection.password">kiss2101</property>
+  <!-- JDBC connection pool (use the built-in) -->
+  <property name="connection.pool_size">1</property>
+  <!-- SQL dialect -->
+  <property name="hibernate.current_session_context_class">thread</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <!-- Disable the second-level cache -->
+  <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+  <!-- Echo all executed SQL to stdout -->
+  <property name="show_sql">true</property>
+  <mapping resource="hibernate/examples/model/Phone.hbm.xml"/>
+  <mapping resource="hibernate/examples/model/CatPhoneType.hbm.xml"/>
+  <mapping resource="hibernate/examples/model/PhoneDetails.hbm.xml"/>
+  <mapping resource="hibernate/examples/model/Client.hbm.xml"/>
+  <!-- Drop and re-create the database schema on startup
+		<property name="hbm2ddl.auto">create</property>
+		 
+ Solo para configiracion XML, se indica el archivo
+		que contiene el mapeo del Entity contra la BD -->
+ </session-factory>
+</hibernate-configuration>

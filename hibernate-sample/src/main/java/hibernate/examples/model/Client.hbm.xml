@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11 sep. 2020 12:22:57 by Hibernate Tools 5.0.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true"
+	default-access="property" default-cascade="none" default-lazy="true">
+	<class catalog="Tutorial" dynamic-insert="false"
+		dynamic-update="false" mutable="true"
+		name="hibernate.examples.model.Client" optimistic-lock="version"
+		polymorphism="implicit" select-before-update="false" table="Client">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="identity" />
+		</id>
+		<property generated="never" lazy="false" name="name"
+			optimistic-lock="true" type="string" unique="false">
+			<column length="45" name="name" />
+		</property>
+		<property generated="never" lazy="false" name="lastName"
+			optimistic-lock="true" type="string" unique="false">
+			<column length="45" name="last_name" />
+		</property>
+		<property generated="never" lazy="false" name="email"
+			optimistic-lock="true" type="string" unique="false">
+			<column length="45" name="email" />
+		</property>
+		<set name="phones" table="phone"
+				inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_client" not-null="true" />
+            </key>
+            <one-to-many class="hibernate.examples.model.Phone" />
+        </set>
+	</class>
+</hibernate-mapping>

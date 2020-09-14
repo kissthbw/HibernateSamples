@@ -37,6 +37,10 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Table( name = "EVENTS" )
 public class Event {
+	
+	//1. Non constructor
+	//2. Private fields and accesors methods
+	
     private Long id;
 
     private String title;

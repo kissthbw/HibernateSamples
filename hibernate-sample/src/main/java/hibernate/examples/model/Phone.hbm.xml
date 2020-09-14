@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11 sep. 2020 12:22:57 by Hibernate Tools 5.0.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true"
+	default-access="property" default-cascade="none" default-lazy="true">
+	<class catalog="Tutorial" dynamic-insert="false"
+		dynamic-update="false" mutable="true"
+		name="hibernate.examples.model.Phone" optimistic-lock="version"
+		polymorphism="implicit" select-before-update="false" table="Phone">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="identity" />
+		</id>
+		<property generated="never" lazy="false" name="number"
+			optimistic-lock="true" type="string" unique="false">
+			<column length="45" name="number" />
+		</property>
+		<property generated="never" lazy="false" name="idDetails"
+			optimistic-lock="true" type="java.lang.Integer" unique="false">
+			<column name="id_details" />
+		</property>
+		<many-to-one name="catPhoneType" class="hibernate.examples.model.CatPhoneType"
+            column="id_cat_phone_type" unique="true" not-null="true"
+            cascade="all" 
+        />
+        <many-to-one name="client" class="hibernate.examples.model.Client"
+         column="id_client" cascade="all"/>
+		
+	</class>
+</hibernate-mapping>
