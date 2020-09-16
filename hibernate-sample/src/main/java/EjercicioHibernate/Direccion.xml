@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11 sep. 2020 12:22:57 by Hibernate Tools 5.0.6.Final -->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true"
+	default-access="property" default-cascade="none" default-lazy="true">
+	<class catalog="Tutorial" dynamic-insert="false"
+		dynamic-update="false" mutable="true"
+		name="EjercicioHibernate.Direccion" optimistic-lock="version"
+		polymorphism="implicit" select-before-update="false" table="Direccion">
+		<id name="idDireccion" type="java.lang.Integer">
+			<column name="idDireccion" />
+			<generator class="identity" />
+		</id>
+		<property name="calle" />
+		<property name="numeroExt" />
+		<property name="numeroInt" />
+		<property name="colonia" />
+		<property name="minAlc" />
+		<property name="codigoPostal" />
+		<property name="estado" />
+	</class>
+</hibernate-mapping>

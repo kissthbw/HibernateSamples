@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11 sep. 2020 12:22:57 by Hibernate Tools 5.0.6.Final -->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true"
+	default-access="property" default-cascade="none" default-lazy="true">
+	<class catalog="Tutorial" dynamic-insert="false"
+		dynamic-update="false" mutable="true"
+		name="EjercicioHibernate.Telefono" optimistic-lock="version"
+		polymorphism="implicit" select-before-update="false" table="Telefono">
+		<id name="idTelefono" type="java.lang.Integer">
+			<column name="idTelefono" />
+			<generator class="identity" />
+		</id>
+		<property generated="never" lazy="false" name="telefono"
+			optimistic-lock="true" type="string" unique="false">
+			<column length="45" name="telefono" />
+		</property>
+		<many-to-one name="TipoTelefono"
+			class="EjercicioHibernate.Telefono"
+			column="idTipoTelefono" unique="true" not-null="true"
+			cascade="all" />
+	</class>
+</hibernate-mapping>
