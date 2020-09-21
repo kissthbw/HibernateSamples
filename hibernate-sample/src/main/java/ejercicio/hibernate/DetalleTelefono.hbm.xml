@@ -6,7 +6,7 @@
 	default-access="property" default-cascade="none" default-lazy="true">
 	<class catalog="Tutorial" dynamic-insert="false"
 		dynamic-update="false" mutable="true"
-		name="EjercicioHibernate.DetalleTelefono" optimistic-lock="version"
+		name="ejercicio.hibernate.DetalleTelefono" optimistic-lock="version"
 		polymorphism="implicit" select-before-update="false"
 		table="DetalleTelefono">
 		<id name="idDetalleTelefono" type="java.lang.Integer">
@@ -14,10 +14,10 @@
 			<generator class="identity" />
 		</id>
 		<many-to-one name="Contacto"
-			class="EjercicioHibernate.Contacto" column="idContacto"
+			class="ejercicio.hibernate.Contacto" column="idContacto"
 			unique="true" not-null="true" cascade="all" />
 		<many-to-one name="TipoTelefono"
-			class="EjercicioHibernate.Telefono" column="idTipoTelefono"
+			class="ejercicio.hibernate.Telefono" column="idTipoTelefono"
 			unique="true" not-null="true" cascade="all" />
 	</class>
 </hibernate-mapping>

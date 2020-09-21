@@ -5,7 +5,7 @@
 <hibernate-mapping auto-import="true"
 	default-access="property" default-cascade="none" default-lazy="true">
 	<class catalog="Tutorial" dynamic-insert="false"
-		dynamic-update="false" mutable="true" name="EjercicioHibernate.Alumno"
+		dynamic-update="false" mutable="true" name="ejercicio.hibernate.Alumno"
 		optimistic-lock="version" polymorphism="implicit"
 		select-before-update="false" table="Alumno">
 		<id name="idAlumno" type="java.lang.Integer">
@@ -17,10 +17,10 @@
 		<property name="aMaterno" />
 		<property name="edad" />
 		<many-to-one name="Contacto"
-			class="EjercicioHibernate.Contacto" column="idContacto" unique="true"
+			class="ejercicio.hibernate.Contacto" column="idContacto" unique="true"
 			not-null="true" cascade="all" />
 		<many-to-one name="Direccion"
-			class="EjercicioHibernate.Telefono" column="idTelefono" unique="true"
+			class="ejercicio.hibernate.Telefono" column="idTelefono" unique="true"
 			not-null="true" cascade="all" />
 	</class>
 </hibernate-mapping>

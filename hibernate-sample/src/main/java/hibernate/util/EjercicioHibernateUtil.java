@@ -14,7 +14,7 @@ public class EjercicioHibernateUtil {
 	private static SessionFactory buildSessionFactory() {
 
 		try {
-			registry = new StandardServiceRegistryBuilder().configure("ejercicio.hibernate.cfg.xml").build();
+			registry = new StandardServiceRegistryBuilder().configure("ejercicio-hibernate.cfg.xml").build();
 			// Create MetadataSources
 			MetadataSources sources = new MetadataSources(registry);
 			// Create Metadata

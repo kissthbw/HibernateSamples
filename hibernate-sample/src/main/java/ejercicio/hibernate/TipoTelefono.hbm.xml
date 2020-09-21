@@ -6,7 +6,7 @@
 	default-access="property" default-cascade="none" default-lazy="true">
 	<class catalog="Tutorial" dynamic-insert="false"
 		dynamic-update="false" mutable="true"
-		name="EjercicioHibernate.TipoTelefono" optimistic-lock="version"
+		name="ejercicio.hibernate.TipoTelefono" optimistic-lock="version"
 		polymorphism="implicit" select-before-update="false"
 		table="TipoTelefono">
 		<id name="idTipoTelefono" type="java.lang.Integer">
