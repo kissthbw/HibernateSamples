@@ -31,12 +31,12 @@
 		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">create</property>
 
-		<mapping resource="simple/hibernate/Alumno.hbm.xml" />
-		<mapping resource="simple/hibernate/Contacto.hbm.xml" />
-		<mapping resource="simple/hibernate/DetalleTelefono.hbm.xml" />
-		<mapping resource="simple/hibernate/Direccion.hbm.xml" />
-		<mapping resource="simple/hibernate/Telefono.hbm.xml" />
-		<mapping resource="simple/hibernate/TipoTelefono.hbm.xml" />
+		<mapping resource="ejercicio/hibernate/Alumno.hbm.xml" />
+		<mapping resource="ejercicio/hibernate/Contacto.hbm.xml" />
+		<mapping resource="ejercicio/hibernate/DetalleTelefono.hbm.xml" />
+		<mapping resource="ejercicio/hibernate/Direccion.hbm.xml" />
+		<mapping resource="ejercicio/hibernate/Telefono.hbm.xml" />
+		<mapping resource="ejercicio/hibernate/TipoTelefono.hbm.xml" />
 
 	</session-factory>
 

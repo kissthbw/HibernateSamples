@@ -1,4 +1,4 @@
-package EjercicioHibernate;
+package ejercicio.hibernate;
 
 public class Contacto {
 
